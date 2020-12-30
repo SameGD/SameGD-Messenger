@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="utf-8">
+<link rel="stylesheet" href="/assets/css/bulma.css">
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="shortcut icon" href="/assets/images/favicon.ico">
+<script type="text/javascript" src="/assets/js/darkmode.js"></script>
+<script type="text/javascript" src="/assets/js/colour.js"></script>
+    
+    <title>
+      Graphics Demo  | Messenger 
+    </title>
+    
+  </head>
+  <body>
+
+<nav class="nb has-background-primary">
+
+  <div class="nb-content">
+    
+    <div class="nb-item nb-breadcrumbs">
+      <ul>
+        <li><a class="title is-4 always-text-white" href="/">Graphics Demo</a></li>
+        <li class="is-active"><a class="subtitle is-5" href="#">Messenger</a></li>
+      </ul>
+    </div>
+    
+    <div class="nb-item darkmode">
+      
+      <input id="darkmode" type="checkbox">
+      <label for="darkmode" title="Toggle Dark Mode"></label>
+      
+    </div>
+    
+  </div>
+  
+</nav>
+
+<div class="container">
+
+  <section class="section" id="nameField">
+    <fieldset>
+      <label class="label">Name</label>
+      <div class="field has-addons">
+        <div class="control is-expanded">
+          <input class="input is-primary" type="text" placeholder="What's yo Name?" id="nameInput">
+        </div>
+        <div class="control">
+          <button class="button is-primary" id="nameButton">Submit</button>
+        </div>
+      </div>
+    </fieldset>
+  </section>
+  
+  <section class="section is-hidden" id="interface">
+    
+    <div class="box p-0">
+      <div class="cont-top">
+        <p class="always-text-white">Users:</p>
+      </div>
+      
+      <div id="userList" class="p-3"></div>   
+      
+    </div>
+  
+    <div class="box p-0">
+      <div class="cont-top">
+        <p class="always-text-white">Messages:</p>
+      </div>
+      <div id="msgContCont">
+        <div id="messageContainer" class="p-3"></div>  
+      </div>
+      
+    </div>
+    
+    <div id="inputField">
+      <div class="field has-addons">
+        <div class="control is-expanded">
+          <input class="input is-primary" type="text" placeholder="Words in here please" id="messageInput">
+        </div>
+        <div class="control">
+          <button class="button is-primary" id="messageButton">Send</button>
+        </div>
+        <div class="control">
+          <button class="button is-primary" id="imageButton">Img</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="assets/js/message.js"></script>
+    
+  </body>
+</html>
