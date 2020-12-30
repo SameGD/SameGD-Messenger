@@ -84,6 +84,4 @@ io.on("connection", (socket) => {
   
 });
 
-http.listen(3000, () => {
-  console.log("Ears on *:3000");
-});
+http.listen(process.env.PORT || 80);
