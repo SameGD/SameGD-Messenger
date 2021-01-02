@@ -50,6 +50,9 @@ nameInput.addEventListener("keyup", function(event) {
 
 socket.on("updateUsers", data => {
 
+  // Clear the user list as the server sends the full user list
+  userList.innerHTML = "";
+
   data.forEach(user => {
     
     userList.innerHTML += "<p>" + user + "</p>"
